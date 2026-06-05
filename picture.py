@@ -27,6 +27,11 @@ def draw_picture(width, height):
         
 
     # code for BLUE triangles
+    sg.set_fill_color(colors[2])
+    
+    for i in range(5):   # fill_triangle(x1, y1, x2, y2, x3, y3)
+        sg.fill_triangle(2*TRIANGLE_WIDTH, i*TRIANGLE_HEIGHT, 2*TRIANGLE_WIDTH, (i+1)*TRIANGLE_HEIGHT, 3*TRIANGLE_WIDTH, (i+1)*TRIANGLE_HEIGHT)
+        #Osmond did this
     
     # code for GREEN triangles (ben)
     sg.set_fill_color("#00ff00") # set fill color to green
@@ -35,16 +40,32 @@ def draw_picture(width, height):
         sg.fill_triangle(1*TRIANGLE_WIDTH, i*TRIANGLE_HEIGHT, 2*TRIANGLE_WIDTH, (i+1)*TRIANGLE_HEIGHT, 1*TRIANGLE_WIDTH, (i+1)*TRIANGLE_HEIGHT) 
         
     # code for YELLOW triangles
-   
+
+    #jiwon
+    sg.set_fill_color(colors[5]) # set fill color to yellow
+    
+    for i in range(5):   # fill_triangle(x1, y1, x2, y2, x3, y3)
+        sg.fill_triangle(1*TRIANGLE_WIDTH, i*TRIANGLE_HEIGHT, 2*TRIANGLE_WIDTH, i*TRIANGLE_HEIGHT, 2*TRIANGLE_WIDTH, (i+1)*TRIANGLE_HEIGHT)
    
     # code for GREEN triangles
  
  
-    # code for MAGENTA triangles
+   # code for MAGENTA triangles (Cherry) 
+    sg.set_fill_color(colors[4]) # set fill color to magenta
+
+    for i in range(5):
+        sg.fill_triangle(
+            0*TRIANGLE_WIDTH, i*TRIANGLE_HEIGHT,
+            1 * TRIANGLE_WIDTH, i * TRIANGLE_HEIGHT,
+            1*TRIANGLE_WIDTH, (i + 1) * TRIANGLE_HEIGHT
+        )
     
     
     # code for CYAN triangles
+    sg.set_fill_color(colors[3])
     
+    for i in range(5):   # fill_triangle(x1, y1, x2, y2, x3, y3)
+        sg.fill_triangle(0, (i+1)*TRIANGLE_HEIGHT, 0, i*TRIANGLE_HEIGHT, TRIANGLE_WIDTH, (i+1)*TRIANGLE_HEIGHT)   
     
     
 
